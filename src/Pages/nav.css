@@ -1,0 +1,11 @@
+body{
+    background-color: red;
+}
+
+.link{
+color:grey;
+text-decoration: none;
+}
+.selected{
+    color: white;
+}
