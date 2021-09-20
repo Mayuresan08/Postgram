@@ -4,7 +4,7 @@ import "./post.css"
 import { Button,Form ,Row,Col} from "react-bootstrap";
 // import DisplayPost from "../Components/displayPost";
 import {NavLink} from "react-router-dom"
-import DisplayComments from "../Components/displayComments"
+
 
 export default function Post()
 {
@@ -150,7 +150,7 @@ function DisplayPost ({data,user})
         //delete-post
         const deletePost=async(id)=>{
             try{
-             const a=await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
+             await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
              let postData=[...data]
             postData=postData.filter((a)=> a.id !== id)
             setData(postData)

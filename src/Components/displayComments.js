@@ -21,7 +21,7 @@ export default function DisplayComments()
         setComments(response.data)
     }
     useEffect(()=>{
-        console.log("in didmount")
+        console.log("in useEffect mount")
         getPost();
         getComments();
     },[])
