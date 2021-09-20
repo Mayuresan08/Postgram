@@ -24,6 +24,7 @@ export default function DisplayComments()
         console.log("in useEffect mount")
         getPost();
         getComments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     
     function PostComments({data})

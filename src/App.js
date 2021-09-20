@@ -1,8 +1,8 @@
 
 import './App.css'; 
 import NavApp from './Pages/nav';
-import {Button,Container} from "react-bootstrap"
-import {BrowserRouter,NavLink,Route,Switch} from "react-router-dom"
+import {Container} from "react-bootstrap"
+import {BrowserRouter,Route,Switch} from "react-router-dom"
 import Home from "./Pages/home"
 import About from "./Pages/about"
 import Post from "./Pages/post"
