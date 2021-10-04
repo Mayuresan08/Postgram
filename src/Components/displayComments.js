@@ -6,6 +6,7 @@ export default function DisplayComments()
 
 { 
     const param=useParams()
+    console.log()
     console.log("in");
     const[post,setPost]=useState({})
     const[comments,setComments]=useState([])

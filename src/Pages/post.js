@@ -167,16 +167,19 @@ function DisplayPost ({data,user})
     }
 
     const handleChange=({target:{name,value,type,checked}})=>{
-        console.log(name,value,type,checked)
+        console.log(name,value,type)
         if(name === "userName") 
-        {
+        { 
+            console.log(value)
             setUserName(value);
-            user.forEach(a=>{
-                console.log(a.userName,value)
-                if(a.username === value)
-                {    console.log(a.username ,a.id)
-                    setId(a.id)
-                    setEmail(a.email)
+            user.forEach(b=>{
+                console.log(b.userName,value)
+                if(b.username === value)
+                {   
+                    console.log("in")
+                     console.log(b.username ,b.id)
+                    setId(b.id)
+                    setEmail(b.email)
                 }
             })
         }
@@ -211,7 +214,7 @@ const copyForm=(id)=>{
                 <Form.Group>
                     <Form.Label >UserName</Form.Label>
                     <Form.Select name="userName" value={userName} onChange={(event)=>{handleChange(event)}}>
-                        <option value="Bret">Bret</option>
+                        {/* <option value="Bret">Bret</option>
                         <option value="Antonette">Antonette</option>
                         <option value="Karianne">Karianne</option>
                         <option value="Kamren">Kamren</option>
@@ -219,7 +222,10 @@ const copyForm=(id)=>{
                         <option value="Elwyn.Skiles">Elwyn.Skiles</option>
                         <option value="Maxime_Nienow">Maxime_Nienow</option>
                         <option value="Delphine">Delphine</option>
-                        <option value="Moriah.Stanton">Moriah.Stanton</option>
+                        <option value="Moriah.Stanton">Moriah.Stanton</option> */}
+                        {user.map((a)=>{
+                            return <option value={a.username}>{a.username}</option>
+                        })}
                     </Form.Select>
                 </Form.Group>
                 <Row>
